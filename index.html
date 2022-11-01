@@ -1,95 +1,74 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="Description" content="Web cua toi"/>
-	<meta name="Author" content="Thanh Phong"/>
-	<meta name="Country" content="Viet Nam"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bt1.css">
-	<title> Web cua Phong</title>
-</head>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <title>SHOP GIAY</title>
+  </head>
+  <body>
+    <div>
+      <div id="header">
+        <div style="background-color: black; height: 48px">
+          <div class="logo_belive">
+            <a><img src="image/beive.gif" width="180px" height="48px" /></a>
+          </div>
+          <div class="logo_nikeblack">
+            <a><img src="image/nike_black.gif" width="120px" height="48px"/></a>
+          </div>
+          <div class="logo_jd">
+            <a href="jordan.html"><img src="image/logo_jd.jpg" width="90px" height="48px"/></a>
+          </div>
+          <div class="logo_giohang">
+            <a href="giohang.html"><img src="image/cart.png" width="40px" /></a>
+          </div>
+          <div class="logo_user">
+            <a href="login.html"><img src="image/user.png" width="30px" /></a>
+          </div>
+        </div>
+        <div style="background-color: rgb(255, 246, 246); height: 88px">
 
-<body>
-	<h1 id="menu_text"> My Resume</h1>
-	
-	<nav>
-		<a href="#About" class="menu_left">About me</a>
-		<a href="#photo" class="menu_left">Photo</a>
-		<a href="#social" class="menu_right">Social Media</a>
-		<a href="#scores" class="menu_right">Scores</a>
-		<a href="#education" class="menu_right">Education</a>
-	</nav>
+          <div>
+            <a class="logo_brand" href="index.html"><img src="image/logo.gif"width="120px"/></a>
+          </div>
 
-	
-	<div id="flex_container">
-		<div id="left_side">
-			<h2 id="About"> About me </h2>
-			<p><em> I am studying in the information technology field </em></p>
-			<ul>
-				<li> <strong> Full name :</strong>Nguyen Thanh Phong</li>
-				<li> <strong> Country :</strong>Viet Nam</li>
-			</ul>
-			<h2 id="photo"> Photo </h2>
-			<img class="img" src="assets/photo1.jpg" alt="Myself1" />
-			<img class="img" src="assets/photo2.jpg" alt="Myself2" />
-			<img class="img" src="assets/photo3.jpg" alt="Myself3" />
-			<img class="img" src="assets/photo4.jpg" alt="Myself4" />
-		</div>
+          <div class="txt">
+            <a href="Hades.html">SHOP ALL</a>
+            <a href="Tops.html">NEW ITEMS </a>
+            <a href="jordan.html">JORDAN</a>
+            <a href="runner.html">RUNNER</a>
+            <a href="lifestyle.html">LIFESTYLE</a>
+            <a href="sale.html">SALE</a>
+          </div>
 
-		<div id="right_side">
+          <div class="txt1">
+            <div id="search_box">
+              <input type="text" id="search_text" placeholder="Search" />
+              <button type="submit" id="search_button" onclick="hienthikq()">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-			<h2 id="education"> Education</h2>
-			<ol>
-				<li> Huynh Thuc Khang Highschool</li>
-				<li> Sai Gon University</li>
-			</ol>
-			<h2 id="scores"> Scores</h2>
-			<table>
-				<tr>
-					<td rowspan="2"></td>
-					<th colspan="2">English</th>
-					<th rowspan="2">Math</th>
-					<th rowspan="2">Physics</th>
-				</tr>
-				<tr>
-					<th>English 1</th>
-					<th>English 2</th>
-				</tr>
-				<tr>
-					<th>2019</th>
-					<td>7</td>
-					<td>7</td>
-					<td>9</td>
-					<td>8</td>
-				</tr>
-				<tr>
-					<th>2020</th>
-					<td>5</td>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-				</tr>
-				<tr>
-					<th>2021</th>
-					<td>8</td>
-					<td>9</td>
-					<td>8</td>
-					<td>8</td>
-				</tr>
-			</table>
-
-
-			<h2 id="social">Social Media</h2>
-			<p>Youtube: <a href="https://www.youtube.com/channel/UCfE5dCYT9qLvIP8dM07bSCw">Nguyen Thanh Phong</a></p>
-			<p>Facebook : <a href="https://www.facebook.com/profile.php?id=100030546668291">Thanh Phong</a></p>
-			<p>Instagram : <a href="https://www.instagram.com/_thanhphong/">_thanhphong</a></p>
-		</div>
-	</div>
-
-	<footer>
-		Created by Thanh Phong - Email me: <a href="mailto:pn33044@gmail.com">pn33044@gmail.com</a>
-	</footer>
-
-</body>
+        <div class="poster">
+          <a><video src="image/nike_vd.mp4"loop autoplay muted width="100%"></video></a>
+        </div>
+        <div class="poster1">
+          <a><img src="image/tieude.png" width="100%" /></a>
+        </div>
+        <div class="poster2">
+          <a><img src="image/nike-just-do-it.jpg" width="100%" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
