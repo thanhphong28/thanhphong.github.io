@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="scrips/scrips.js" ></script>
+
+    <title>SHOP GIAY</title>
+  </head>
+  <body>
+      <div id="header">
+        <div style="background-color: black; height: 48px">
+          <div class="logo_belive">
+            <a href="index.html"><img src="image/beive.gif" width="200px" height="48px" /></a>
+          </div>
+          <div class="logo_nikeblack">
+            <a href="index.html"><img  src="image/nike_black.gif" width="120px" height="48px"/></a>
+          </div>
+          <div class="logo_jd">
+            <a href="jordan.html"><img src="image/logo_jd.jpg" width="90px" height="48px"/></a>
+          </div>
+          <div class="logo_giohang">
+            <a href="giohang.html"><img src="image/cart.png" width="40px" /></a>
+          </div>
+          <div class="logo_user">
+            <a onclick="login()"><img src="image/user.png" width="30px" /></a>
+          </div>
+        </div>
+        <div style="background-color: rgb(255, 255, 255); height: 88px">
+
+          <div>
+            <a class="logo_brand" href="index.html"><img src="image/logo.gif"width="120px"/></a>
+          </div>
+
+          <div class="menu">
+            <a href="Hades.html">SHOP ALL</a>
+            <a href="Tops.html">NEW ITEMS </a>
+            <a href="jordan.html">JORDAN</a>
+            <a href="runner.html">RUNNER</a>
+            <a href="lifestyle.html">LIFESTYLE</a>
+            <a href="sale.html">SALE</a>
+          </div>
+
+          <div class="search">
+            <a id="search_box">
+              <input type="text" id="search_text" placeholder="Search" />
+              <button type="button" id="search_button" onclick="find()">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <div class="poster">
+          <a><video src="image/nike_vd.mp4"loop autoplay muted width="100%"></video></a>
+        </div>
+        <div class="poster1">
+          <a><img src="image/tieude.png" width="100%" /></a>
+        </div>
+        <div class="poster2">
+          <a><img src="image/nike-just-do-it.jpg" width="100%" /></a>
+        </div>
+      </div>
+
+
+      <div id="login_container">
+        <div id="loginform">
+            <form action="index.html" method="get" onsubmit="return check()" >
+                <div class="a">
+                  <div class="bt_exit"> <input type="button" value="" style="background-image: url(image/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit()"></input> </div>
+                  <br>
+                  <div id="header">
+                      <h2>ĐĂNG NHẬP</h2>
+                  </div>
+                  <br>
+                  <div>
+                      <label for="tkhoan"><b> Nhập Email </b> </label>
+                      <input class="ip" type="text" placeholder="nhập email của bạn" id="tkhoan" name="tkhoan" > <br>  
+                  </div>
+                  <div>
+                      <label for="mkhau"><b> Nhập Mật Khẩu </b> </label>
+                      <input class="ip" type="password"  placeholder="nhập mật khẩu của bạn" id="mkhau" name="mkhau"><br> 
+                  </div>
+                  <br>
+                  <div id="error" style="color:red "></div>
+                  <br>
+                  <input class="btn_dangky" type="button" value="Đăng Ký" onclick="register()">   
+                  <input class="registerbtn" onclick="kiemtra()" type="submit" value="Xác Nhận">  
+              </div>
+            </form>
+        </div>
+        <div id="register_container">
+          <div id="registerform">
+              <form action="index.html" method="get" onsubmit="return check()" >   <!--method: get: thông qua url / post: thông qua http request-->
+                  <div class="a">
+                    <div class="bt_exit"> <input type="button" value="" style="background-image: url(image/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit_register()"></input> </div>
+                    <br>
+                    <div id="header">
+                        <h2>ĐĂNG KÝ</h2>
+                    </div>
+                    <br>
+                    <div>
+                      <label for="fname"><b> Nhập Tên </b> </label>
+                      <input class="ip" type="text" placeholder="nhập tên của bạn" id="fname" name="fname" > <br>
+                    </div>
+                    <br>
+                    <div>
+                      <label for="lname"><b> Nhập Họ </b> </label>
+                      <input class="ip" type="text" placeholder="nhập họ của bạn" id="lname" name="lname" > <br>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tkhoan"><b> Nhập Email </b> </label>
+                        <input class="ip" type="text" placeholder="nhập email của bạn" id="tkhoan" name="tkhoan" > <br>  
+                    </div>
+                    <div>
+                        <label for="mkhau"><b> Nhập Mật Khẩu </b> </label>
+                        <input class="ip" type="password"  placeholder="nhập mật khẩu của bạn" id="mkhau" name="mkhau"><br> 
+                    </div>
+                    <div>
+                      <label for="mkhau"><b> Xác Nhận Mật Khẩu </b> </label>
+                      <input class="ip" type="password"  placeholder="nhập mật khẩu của bạn" id="mkhau" name="mkhau"><br> 
+                  </div>
+                    <br>
+                    <div id="error" style="color:red "></div>
+                    <br>
+                    <input class="btn_dangky" type="reset" value="Nhập Lại">
+                    <input class="registerbtn" onclick="kiemtra()" type="submit" value="Xác Nhận">  
+                </div>
+              </form>
+          </div>
+        </div>
+      
+  </body>
+</html>
