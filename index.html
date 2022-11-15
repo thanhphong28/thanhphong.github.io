@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="image/logo_shop/icon_logoshop2.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="scrips/scrips.js" defer></script>
+
+    <title>BELIEVE</title>
+    
+  </head>
+
+  <!-- HEADER -->
+  <div id="header">
+    <div style="background-color: black; height: 48px">
+      <div class="logo_belive">
+        <a href="index.html"><img src="image/logo_header/beive.gif" width="200px" height="48px" /></a>
+      </div>
+      <div class="logo_nikeblack">
+        <a href="index.html"><img  src="image/logo_header/nike_black.gif" width="120px" height="48px"/></a>
+      </div>
+      <div class="logo_jd">
+        <a href="index.html?type=jordan"><img src="image/logo_header/logo_jd.jpg" width="90px" height="48px"/></a>
+      </div>
+      <div class="logo_vans">
+        <a href="index.html?type=vans"><img src="image/logo_header/Vans.png" width="50px" height="28px"/></a>
+      </div>
+      <div class="logo_giohang">
+        <a href="index.html?cart"><img src="image/logo_header/cart.png" width="40px" /></a>
+      </div>
+      <div class="logo_user">
+        <a onclick="login()"><img src="image/logo_header/user.png" width="30px" /></a>
+      </div>
+      <div class="logo_user" style="display:none" id="logo_user2">
+        <a onclick="user_popup()"><img src="image/logo_header/user.png" width= "30px" /></a>
+      </div>
+    </div>
+    <div style="background-color: rgb(250, 250, 250); height: 88px">
+      <div>
+        <a class="logo_brand" href="index.html"><img src="image/logo_header/logo.gif"width="120px" height="84px"/></a>
+      </div>
+
+      <div class="menu">
+          <a href="index.html?type=all">SHOP ALL</a>
+          <div class="dropdown">
+            <a href="index.html#jordan">NEW ITEMS </a>
+            <div class="dropdown-content">
+              <div >
+                <ul>
+                  <li class="dropdown_tt">
+                    <a href="index.html#jordan">JORDAN</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a  href="index.html#nike">NIKE AIR</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a href="index.html#vans">VANS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="index.html?type=nike">NIKE AIR</a>
+            <div class="dropdown-content">
+              <div >
+
+                <ul>
+                  <li class="dropdown_tt">
+                    <a  href="index.html?type=nike_af1">Air Force 1</a>
+                  </li>
+                  
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=nike_am">Air Max</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=nike_az">Air Zoom</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <div class="dropdown">
+          <a href="index.html?type=jordan">JORDAN</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=jordan_1low">Jordan 1 Low</a>
+                </li>
+                
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_1mid">Jordan 1 Mid</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_1high">Jordan 1 High</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_4">Jordan 4</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="index.html?type=vans">VANS</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=vans_os">Old School</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=vans_so">Slip-On</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=vans_cls">Classic</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="index.html?type=sale">SALE</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=sale_10">Sale 10%</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=sale_30">Sale 30%</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="search">
+        <a id="search_box">
+          <input type="text" id="search_text" placeholder="Search" />
+          <button type="button" id="search_button" onclick="find()">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>  
+
+  <body>
+
+    <!-- Content -->
+    <div id="poster_container">
+      <div class="poster">
+        <a href="index.html?type=jordan"><video src="image/poster/vd_gth.mp4"loop autoplay muted width="100%"></video></a>
+      </div>
+      <div>
+        <a href="index.html?type=jordan"><button class="btn_jordan">JORDAN</button></a>
+      </div>
+      <div class="poster1">
+        <a href="index.html?type=nike"><img src="image/poster/tieude.png" width="100%" /></a>
+      </div>
+      <div>
+        <a href="index.html?type=nike"><button class="btn_nikeair">NIKE AIR</button></a>
+      </div>
+      <div class="poster2">
+        <a href="index.html?type=nike"><img src="image/poster/nike-just-do-it.jpg" width="100%" /></a>
+      </div>
+      <div class="poster3"> 
+          <a href="index.html?type=vans"><img src="image/poster/tieude_vans.png" width="100%" /></a>
+      </div>
+      <div>
+        <a href="index.html?type=vans"><button class="btn_vans">VANS</button></a>
+      </div>
+      <div id="jordan" width="100%" class="text_roll" >
+        <a href="index.html"><marquee scrollamount="20" loop="-1" direction="left" ><img src="image/text/BELIEVE_SHOP.png"><img src="image/text/BELIEVE_SHOP.png"></marquee></a> 
+      </div>
+    </div>
+    <br>
+
+    <!-- USER -->
+      <!-- login -->
+    <div class ="form_container"  id="login_container">
+      <div id="loginform">
+        <form action="index.html" method="get" onsubmit="return login_check()" >
+          <div class="border">
+            <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit()"></input> </div>
+            <br>
+            <div >
+                <h2>ĐĂNG NHẬP</h2>
+            </div>
+            <br>
+            <div >
+                <input class="ip" type="text" placeholder="Nhập email của bạn" id="email" name="email" > <br>  
+            </div>
+            <div>
+                <input class="ip" type="password"  placeholder="Nhập mật khẩu của bạn" id="mkhau" name="mkhau"><br> 
+            </div>
+            <br>
+            <div id="login_error" style="color:red "></div>
+            <br>
+            <input class="btn_form" type="button" value="Đăng Ký" onclick="register()">   
+            <input class="btn_form" style="float:right;" onsubmit="login_check()" type="submit" value="Xác Nhận">  
+          </div>
+        </form>
+      </div>
+    </div>
+      <!-- register -->
+    <div class ="form_container" id="register_container">
+      <div id="registerform">
+        <form action="index.html" method="get" onsubmit="return kiemtra()">   <!--method: get: thông qua url / post: thông qua http request-->
+          <div class="border" >
+            <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit_register()"></input> </div>
+            <br>
+            <div>
+              <h2>ĐĂNG KÝ</h2>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập tên của bạn" id="fname" name="fname" > <br>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập họ của bạn" id="lname" name="lname" > <br>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập số điện thoại" id="phone" name="phone" > <br>
+            </div>
+      
+            <div>
+              <input class="ip" type="text" placeholder="Nhập email của bạn" id="id_email" name="email" > <br>  
+            </div>
+
+            <div>
+              <input class="ip" type="password"  placeholder="Nhập mật khẩu" id="id_mkhau" name="mkhau"><br> 
+            </div>
+            
+            <div>
+              <input class="ip" type="password"  placeholder="Nhập lại mật khẩu" id="confirm_mkhau" name="mkhau"><br> 
+            </div> 
+          </div>
+        
+          <div id="error" style="color:red "></div>
+
+          <input class="btn_form" type="reset" value="Nhập Lại" onclick="reseterror()">
+          <input class="btn_form" style="float:right;" onclick="new_user()" type="button" value="Xác Nhận">  
+        
+        </form>
+      </div>
+    </div>
+    <!-- user container-->
+    <div class = "form_container" id="user_container" >
+      <div id="loginform">
+        <div class="border">
+          <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick=exit_user()></input> </div>
+          <br>
+          <div >
+              <h2>THÔNG TIN</h2>
+          </div>
+          <br>
+        <div class ="info_container"> 
+          <div>Tên: </div>
+          <div id="user_fname" class="user_info">   </div>
+        </div>
+          <br>
+        <div class ="info_container">
+          <div>Sdt: </div>
+          <div id="user_phone" class="user_info">   </div>
+        </div>
+          <br>
+        <div class ="info_container">
+          <div>Email: </div>
+          <div id="user_email" class="user_info">   </div>
+        </div>
+          <br>
+        <div class ="info_container">
+          <div>Mật khẩu: </div>
+          <input type="password" class="user_info" readonly="true" id="user_mkhau" onclick="hide_password()">
+        </div>
+          <input class="btn_form" type="button" value="Đăng xuất" onclick="logout()">   
+          <input class="btn_form"style="float:right;" type="button" value="Thiết lập">  
+        </div>
+      </div>
+    </div>
+    <!-- product container -->
+    <div id="main_product_content">
+      
+      <div id="main_product_container">
+      </div>
+      <div id="pagination">
+        <button id="pagination_left" onclick="prevpage()"><i class="fa-solid fa-chevron-left"></i></button>
+        <input id="pagination_center" type="text" value="1"/>
+        <button id="pagination_right" onclick="nextpage()"><i class="fa-solid fa-chevron-right"></i></button> 
+      </div>
+    </div>
+
+    <div class="product_content">
+      <div  class="title_sp_new">
+        <a href="index.html?type=jordan" >JORDAN (new)</a>
+      </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade ">
+          <div width="100%">
+            <!-- list sản phẩm -->
+            <div class="product_container">
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_low/giay-air-jordan-1-low-powder-blue-cz0775-104.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Air Jordan 1 Low ‘Black Dark Powder Blue’ </h3>
+                    <div class="product_price"><b>5.290.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item ">
+                  <div class="product_info">
+                    <img src="image/jordan1_low/giay-air-jordan-1-low-zion-williamson-voodoo-dz7292-200.png.webp" />
+                    
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Air Jordan 1 Retro Low OG Zion Williamson Voodoo </h3>
+                    <div class="product_price"><b>6.290.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_low/giay-nike-jordan-1-low-reverse-black-toe-w-dc0774-160.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Jordan 1 Low Reverse Black Toe (W)</h3>
+                    <div class="product_price"><b>3.690.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_low/giay-nike-air-jordan-1-low-x-travis-scott-sail-and-ridgerock-dm7866-162-18.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Jordan 1 Low x Travis Scott ‘Sail and Ridgerock’</h3>
+                    <div class="product_price"><b>38.690.000₫</b></div>
+                  </div>
+                </div>
+                <a  class="control prev"  >
+                  <i class='bx bx-chevron-left' onclick="plusSlides(-1)" ></i>
+                </a>
+                <a class="control next"  >
+                  <i class='bx bx-chevron-right'onclick="plusSlides(1)" ></i>
+                </a>
+              
+                
+                <div class="main_dot">
+                  <span class="dot" onclick="currentSlide(1)" ></span> 
+                  <span class="dot" onclick="currentSlide(2)" ></span> 
+                </div>
+              </div>
+            <div id="nike"></div>
+          </div>
+        </div>
+        <div class="mySlides fade ">
+          <div width="100%">
+            <!-- list sản phẩm -->
+            <div class="product_container">
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_mid/giay-nike-jordan-1-mid-se-beach-cherrywood-red-dr0501-200.jpg.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Jordan 1 Mid  ‘Beach Cherrywood’</h3>
+                    <div class="product_price"><b>5.290.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_mid/giay-nike-jordan-1-midlakers-dq8426-517.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Jordan 1 Mid “Lakers”</h3>
+                    <div class="product_price"><b>4.890.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_mid/giay-nike-air-jordan-1-mid-rookie-dr6496-116.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Jordan 1 Mid “Rookie Season”</h3>
+                    <div class="product_price"><b>4.090.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/jordan1_mid/giay-nike-air-jordan-1-mid-se-wear-away-chicago-dv9565-006-11.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Jordan 1 Mid SE ‘Wear-Away Chicago’</h3>
+                    <div class="product_price"><b>5.890.000₫</b></div>
+                  </div>
+                </div>
+              
+                <a  class="control prev"  >
+                  <i class='bx bx-chevron-left' onclick="plusSlides(-1)" ></i>
+                </a>
+                <a class="control next"  >
+                  <i class='bx bx-chevron-right'onclick="plusSlides(1)" ></i>
+                </a>
+                <div class="main_dot">
+                  <span class="dot" onclick="currentSlide(1)" ></span> 
+                  <span class="dot" onclick="currentSlide(2)" ></span> 
+                </div>
+            </div>
+            <div id="nike"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="product_content">
+      <div  class="title_sp_new">
+        <a href="index.html?type=jordan" >NIKE AIR (new)</a>
+      </div>
+      <div class="mySlides1 fade ">
+        <div width="100%">
+          <!-- list sản phẩm -->
+          <div class="product_container">
+              <div class="product_item">
+                <div class="product_info">
+                  <img src="image/nike_az/giay-nike-air-zoom-g-t-jump-black-racer-pink-game-royal-dx4111-064.png.webp" />
+                  <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                  <h3 class="product_name">Giày Nike Air Zoom G.T.Jump “Black Racer Pink Game Royal”</h3>
+
+                  <div class="product_price"><b>4.890.000₫</b></div>
+                </div>
+              </div>
+              <div class="product_item">
+                <div class="product_info">
+                  <img src="image/nike_az/giay-nike-zoom-gt-cut-2-crosshairs-fb1961-141.png.webp" />
+                  <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                  <h3 class="product_name">Giày Nike Zoom GT Cut 2 “Crosshairs”</h3>
+                  <div class="product_price"><b>5.890.000₫</b></div>
+                </div>
+              </div>
+              <div class="product_item">
+                <div class="product_info">
+                  <img src="image/nike_am/giay-nike-air-max-270-golf-white-black-ck6483-102.png.webp" />
+                  <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                  <h3 class="product_name">Giày Nike Air Max 270 Golf ‘White Black’ </h3>
+                  <div class="product_price"><b>4.152.000₫</b></div>
+                </div>
+              </div>
+              <div class="product_item">
+                <div class="product_info">
+                  <img src="image/nike_am/giay-nike-air-max-pre-day-voodoo-mystic-navy-dq5082-400.jpg.webp" />
+                  <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                  <h3 class="product_name">Giày Nike Air Max Pre-Day ‘Voodoo – Mystic Navy’</h3>
+                  <div class="product_price"><b>4.390.000₫</b></div>
+                </div>
+              </div>
+            
+              <a  class="control prev"  >
+                <i class='bx bx-chevron-left' onclick="plusSlides1(-1)" ></i>
+              </a>
+              <a class="control next"  >
+                <i class='bx bx-chevron-right'onclick="plusSlides1(1)" ></i>
+              </a>
+              <div class="main_dot1">
+                <span class="dot1" onclick="currentSlide1(1)" ></span> 
+                <span class="dot1" onclick="currentSlide1(2)" ></span> 
+              </div>
+          </div>
+          <div id="nike"></div>
+        </div>
+      </div>
+      <div class="slideshow-container">
+        <div class="mySlides1 fade ">
+          <div width="100%">
+            <!-- list sản phẩm -->
+            <div class="product_container">
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/nike_af1/giay-nike-air-force-1-07-lx-toasty-brown-kelp-dc8744-301.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Force 1 '07 LX 'Toasty - Brown Kelp'</h3>
+                    <div class="product_price"><b>3.490.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item ">
+                  <div class="product_info ">
+                    <img src="image/nike_af1/giay-nike-air-force-1-low-white-sail-black-dq7669-100-9.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Force 1 React Low White Sail Black</h3>
+                    <div class="product_price"><b>4.690.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info ">
+                    <img src="image/nike_af1/giay-nike-air-force-1-mid-sun-club-whire-dm0119-100.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Force 1 Mid Sun Club White </h3>
+                    <div class="product_price"><b>3.890.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item ">
+                  <div class="product_info">
+                    <img src="image/nike_af1/giay-nike-air-force-1-mid-react-white-black-dq7668-100.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Nike Air Force 1 Mid React ‘White Black’</h3>
+                    <div class="product_price"><b>5.390.000₫</b></div>
+                  </div>
+                </div>
+                <a  class="control prev" >
+                  <i class='bx bx-chevron-left' onclick="plusSlides1(-1)" ></i>
+                </a>
+                <a class="control next" >
+                  <i class='bx bx-chevron-right'onclick="plusSlides1(1)" ></i>
+                </a>
+                <div class="main_dot1">
+                  <span class="dot1" onclick="currentSlide1(1)" ></span> 
+                  <span class="dot1" onclick="currentSlide1(2)" ></span> 
+                </div>
+              </div>
+            <div id="vans"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product_content">
+      <div  class="title_sp_new">
+        <a href="index.html?type=jordan" >VANS (new)</a>
+      </div>
+      <div class="slideshow-container">
+        <div class="mySlides2 fade ">
+          <div width="100%">
+            <!-- list sản phẩm -->
+            <div class="product_container">
+                <div class="product_item">
+                  <div class="product_info">
+                    <img src="image/vans_os/Giay-Vans-Ua-Style-36-Decon-Sf-Pumpkin-SpiceAntique-VN0A3MVL25T.jpg.webp">
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Vans Ua Style 36 Decon Sf Pumpkin Spice/Antique</h3>
+                    <div class="product_price"><b>2.890.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item ">
+                  <div class="product_info ">
+                    <img src="image/vans_so/1-15.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Vans UA Authentic ‘Disruptive’</h3>
+                    <div class="product_price"><b>1.690.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="product_info ">
+                    <img src="image/vans_cl/hkenpvans-era-women-shoes-4378v315550473102searchCategoryall-1.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Vans Classic Era 'Pink' VN0A54F14FW1</h3>
+                    <div class="product_price"><b>1.790.000₫</b></div>
+                  </div>
+                </div>
+                <div class="product_item ">
+                  <div class="product_info">
+                    <img src="image/vans_so/giay-vans-classic-slip-on-flame-vn0a33tbk681-9.png.webp" />
+                    <a href="index.html" class="product_buy">Thêm Vào Giỏ Hàng</a>
+                    <h3 class="product_name">Giày Vans Classic Slip-On Flame</h3>
+                    <div class="product_price"><b>1.490.000₫</b></div>
+                  </div>
+                </div>
+                <a  class="control prev" >
+                  <i class='bx bx-chevron-left' onclick="plusSlides2(-1)" ></i>
+                </a>
+                <a class="control next" >
+                  <i class='bx bx-chevron-right'onclick="plusSlides2(1)" ></i>
+                </a>
+                <div class="main_dot2">
+                  <span class="dot2" onclick="currentSlide2(1)" ></span> 
+                </div>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    
+    <div width="100%" class="text_roll" >
+      <a href="sale.html"><marquee scrollamount="20" loop="-1" direction="right" ><img src="image/text/sale.png"><img src="image/text/sale.png"></marquee></a> 
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer">
+      <div style="background-color: rgb(0, 0, 0); width: 100%; height: 350px">
+        <div>
+          <a target="_blank" href="believe.html" class="logo_shop"><img src="image/logo_shop/icon_logoshop.png" width="300px"></a>
+        </div>
+        <div>
+          <a target="_blank" href="https://www.facebook.com/nike" class="iconfb"><img src="image/icon/logo_fb.png" width="40px"></a>
+        </div>
+        <div>
+          <a target="_blank" href="https://www.instagram.com/nike/" class="iconig"><img src="image/icon/logo_ig.png" width="40px"></a>
+        </div>
+        <div>
+          <a target="_blank" href="https://www.youtube.com/user/nike" class="iconyt"><img src="image/icon/logo_yt.png" width="40px"></a>
+        </div>
+        <div>
+          <a target="_blank" href="https://twitter.com/Nike" class="icontw"><img src="image/icon/logo_tw.png" width="40px"></a>
+        </div>
+        <div>
+          <a  href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599171,106.6800696,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583?hl=vi" target="_blank" class="gps"><img src="image/footer/logo_footer.gif" width="200px"></a>
+        </div>   
+        <div class=footer_text1>
+          <ul>
+            <li class="footer_link_tt">
+              <a href="http://about.nike.com/" >About Nike</a>
+            </li>
+            <li class="footer_link">
+                <a target="_blank"  href="http://news.nike.com/" >News</a>
+            </li>
+            <li class="footer_link">
+              <a target="_blank"   href="https://jobs.nike.com/" >Careers</a>
+            </li>
+            <li class="footer_link">
+              <a target="_blank"   href="http://investors.nike.com/" >Investors</a>
+            </li>
+            <li class="footer_link">
+              <a target="_blank"   href="https://www.nike.com/vn/sustainability" >Sustainability</a>
+            </li>
+          </ul>
+        </div> 
+        
+        <div class="footer_text2">
+          <ul>
+            <li class="footer_link_tt">
+              <a href="https://www.vans.com/en-us/company/about" >About Vans</a>
+            </li>
+            
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.vans.com/en-us/careers">Careers</a>
+            </li>
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.vans.com/en-us/checkerboardfund">Checker Board Fund</a>
+            </li>
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.vans.com/en-us/company/affiliate-program">Affiliate Program</a>
+            </li>
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.vans.com/en-us/unsolicited-materials">Unsolicited Materials</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer_text3">
+          <ul>
+            <li class="footer_link_tt">
+              <a href="https://www.vans.com/en-us/company/about">CREATE BY</a>
+            </li>
+            
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.facebook.com/profile.php?id=100030546668291">Thanh Phong</a>
+            </li>
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.facebook.com/profile.php?id=100009295230748">Minh Tiến</a>
+            </li>
+            <li class="footer_link">
+              <a  target="_blank"  href="https://www.facebook.com/">Nhật Khải</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
