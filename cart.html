@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/cart.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="image/logo_shop/icon_logoshop2.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="scrips/scrips.js" defer></script>
+    <script src="scrips/cart.js" defer></script>
+
+
+
+    <title>BELIEVE</title>
+  </head>
+<body>
+    <!-- HEADER -->
+  <div id="header">
+    <div style="background-color: black; height: 48px">
+      <div class="logo_belive">
+        <a href="index.html"><img src="image/logo_header/beive.gif" width="200px" height="48px" /></a>
+      </div>
+      <div class="logo_nikeblack">
+        <a href="index.html"><img  src="image/logo_header/nike_black.gif" width="120px" height="48px"/></a>
+      </div>
+      <div class="logo_jd">
+        <a href="index.html?type=jordan"><img src="image/logo_header/logo_jd.jpg" width="90px" height="48px"/></a>
+      </div>
+      <div class="logo_vans">
+        <a href="index.html?type=vans"><img src="image/logo_header/Vans.png" width="50px" height="28px"/></a>
+      </div>
+      <div class="logo_giohang">
+        <a href="cart.html" ><img src="image/logo_header/cart.png" width="40px" /></a>
+      </div>
+      <div class="logo_user">
+        <a onclick="login()"><img src="image/logo_header/user.png" width="30px" /></a>
+      </div>
+      <div class="logo_user" style="display:none" id="logo_user2">
+        <a onclick="user_popup()"><img src="image/logo_header/user.png" width= "30px" /></a>
+      </div>
+    </div>
+    <div style="background-color: rgb(250, 250, 250); height: 88px">
+      <div>
+        <a class="logo_brand" href="index.html"><img src="image/logo_header/logo.gif"width="120px" height="84px"/></a>
+      </div>
+    
+      <div class="menu">
+          <a href="index.html?type=all">SHOP ALL</a>
+          <div class="dropdown">
+            <a href="index.html?type=new">NEW ITEMS </a>
+            <div class="dropdown-content">
+              <div >
+                <ul>
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=new_jordan">JORDAN</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a  href="index.html?type=new_nike">NIKE AIR</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=new_vans">VANS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="index.html?type=nike">NIKE AIR</a>
+            <div class="dropdown-content">
+              <div >
+
+                <ul>
+                  <li class="dropdown_tt">
+                    <a  href="index.html?type=nike_af1">Air Force 1</a>
+                  </li>
+                  
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=nike_am">Air Max</a>
+                  </li>
+                  <li class="dropdown_tt">
+                    <a href="index.html?type=nike_az">Air Zoom</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <div class="dropdown">
+          <a href="index.html?type=jordan">JORDAN</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=jordan_1low">Jordan 1 Low</a>
+                </li>
+                
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_1mid">Jordan 1 Mid</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_1high">Jordan 1 High</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=jordan_4">Jordan 4</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="index.html?type=vans">VANS</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=vans_os">Old School</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=vans_so">Slip-On</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=vans_cls">Classic</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a style="color:red !important;" href="index.html?type=sale">SALE</a>
+          <div class="dropdown-content">
+            <div >
+              <ul>
+                <li class="dropdown_tt">
+                  <a  href="index.html?type=sale_10">Sale 10%</a>
+                </li>
+                <li class="dropdown_tt">
+                  <a href="index.html?type=sale_30">Sale 30%</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- USER -->
+      <!-- login -->
+    <div class ="form_container"  id="login_container">
+      <div id="loginform">
+        <form  >
+          <div class="border">
+            <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit()"></input> </div>
+            <br>
+            <div >
+                <h2>ĐĂNG NHẬP</h2>
+            </div>
+            <br>
+            <div >
+                <input class="ip" type="text" placeholder="Nhập email của bạn" id="email" name="email" > <br>  
+            </div>
+            <div>
+                <input class="ip" type="password"  placeholder="Nhập mật khẩu của bạn" id="mkhau" name="mkhau"><br> 
+            </div>
+            <br>
+            <div id="login_error" style="color:red "></div>
+            <br>
+            <input class="btn_form" type="button" value="Đăng Ký" onclick="register()">   
+            <input class="btn_form" style="float:right;" onsubmit="login_check()" type="submit" value="Xác Nhận">  
+          </div>
+        </form>
+      </div>
+    </div>
+      <!-- register -->
+    <div class ="form_container" id="register_container">
+      <div id="registerform">
+        <form action="index.html" method="get" onsubmit="return kiemtra()" id="register_form">   <!--method: get: thông qua url / post: thông qua http request-->
+          <div class="border" >
+            <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick="exit_register()"></input> </div>
+            <br>
+            <div>
+              <h2>ĐĂNG KÝ</h2>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập tên của bạn" id="fname" name="fname" > <br>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập họ của bạn" id="lname" name="lname" > <br>
+            </div>
+            
+            <div>
+              <input class="ip" type="text" placeholder="Nhập số điện thoại" id="phone" name="phone" > <br>
+            </div>
+      
+            <div>
+              <input class="ip" type="text" placeholder="Nhập email của bạn" id="id_email" name="email" > <br>  
+            </div>
+
+            <div>
+              <input class="ip" type="password"  placeholder="Nhập mật khẩu" id="id_mkhau" name="mkhau"><br> 
+            </div>
+            
+            <div>
+              <input class="ip" type="password"  placeholder="Nhập lại mật khẩu" id="confirm_mkhau" name="mkhau"><br> 
+            </div> 
+          </div>
+        
+          <div id="error" style="color:red "></div>
+
+          <input class="btn_form" type="reset" value="Nhập Lại" onclick="reseterror()">
+          <input class="btn_form" style="float:right;" onclick="new_user()" type="button" value="Xác Nhận">  
+        
+        </form>
+      </div>
+    </div>
+    <!-- user container-->
+    <div class = "form_container" id="user_container" >
+      <div id="loginform">
+        <div class="border">
+          <div class="btn_exit"> <input type="button" value="" style="background-image: url(image/logo_header/x.png) ;background-size:100% 100%; width: 30px; height: 30px; border: none;"  onclick=exit_user()></input> </div>
+          <br>
+          <div >
+              <h2>THÔNG TIN</h2>
+          </div>
+          <br>
+        <div class ="info_container"> 
+          <div>Tên: </div>
+          <div id="user_fname" class="user_info">   </div>
+        </div>
+          <br>
+        <div class ="info_container">
+          <div>Sdt: </div>
+          <div id="user_phone" class="user_info">   </div>
+        </div>
+          <br>
+        <div class ="info_container">
+          <div>Email: </div>
+          <div id="user_email" class="user_info">   </div>
+        </div>
+          <br>
+          <div class ="info_container">
+            <div>Mật khẩu: </div>
+            <div class="user_info" style="width:30%" id="user_password"><input type="password"  readonly="true" id="user_mkhau" ></div>
+            <i class="fa-solid fa-eye" onclick="hide_password()" id="eye" ></i>
+            <i class="fa-solid fa-eye-slash" onclick="hide_password()" id="eye_slash"style="display: none;"></i>
+          </div>
+          <input class="btn_form" type="button" value="Đăng xuất" onclick="logout()" id ="btn_logout">   
+          <a href="admin.html"><input class="btn_form"style="float:right;" type="button" value="Thiết lập" id="btn_setting">  </a>  
+          
+        </div>
+      </div>
+    </div>
+    <!-- product container -->
+    <div id="main_product_content">
+      
+      <div id="main_product_container">
+      </div>
+      <div id="pagination">
+        <button id="pagination_left" onclick="prevpage()"><i class="fa-solid fa-chevron-left"></i></button>
+        <input id="pagination_center" type="text" value="1"/>
+        <button id="pagination_right" onclick="nextpage()"><i class="fa-solid fa-chevron-right"></i></button> 
+      </div>
+    </div>
+      <!-- menu khi thu nhỏ -->
+      <div class="menu2">
+        
+        <div class="dropdown2">
+          <i  class="fa-solid fa-bars"></i>
+          <div class="dropdown-content2">
+            <div >
+
+              <ul>
+                <li class="dropdown_tt2">
+                  <a  href="index.html?type=all">Shop All</a>
+                </li>
+                <li class="dropdown_tt2">
+                  <a  href="index.html?type=nike">New Items</a>
+                </li>
+                <li class="dropdown_tt2">
+                  <a  href="index.html?type=jordan">Jordan</a>
+                </li>
+                <li class="dropdown_tt2">
+                  <a href="index.html?type=nike">Nike Air</a>
+                </li>
+                <li class="dropdown_tt2">
+                  <a href="index.html?type=vans">Vans</a>
+                </li>
+                <li class="dropdown_tt2">
+                  <a style="color:red !important ;" href="index.html?type=sale">Sale</a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      
+
+      </div>
+
+      <div class="search">
+        <a id="search_box">
+          <input type="text" id="search_text" placeholder="Search" />
+          <button type="button" id="search_button" onclick="find()">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>  
+
+  <!-- phần giỏ hàng -->
+    <div class="gio-hang" id="gio-hang">
+      <!-- danh sách item giỏ hàng -->
+      <h1 class="tieudegiohang">Danh Sách Sản Phẩm</h1>
+
+      <!-- tiêu để của item giỏ hàng  -->
+      <div class="item-gio-hang">
+        <div class="hinhAnh">
+        </div>
+        <div class="ten">
+          <p class="tentt">Sản Phẩm</p>
+        </div>
+        <div class="gia"> 
+          <p class="giatt">Đơn Giá </p>
+        </div>
+        <div class="soluong">
+          <p class="soluongtt">Số Lượng</p>
+        </div>
+        <div class="tongtien">
+          <p class="tongtientt">Tổng Tiền </p>
+        </div>
+        <div class="hanhdong">
+          <p class="hanhdongtt">Xoá</p>
+        </div>
+        <!-- hiện thị danh sách item giỏ hàng -->
+      </div>
+     
+    </div>
+  <div class="form_thongtin">
+    <form action="giohang.html" method="get" onsubmit="return taoDonHang()" >   <!--method: get: thông qua url / post: thông qua http request-->
+      <div class="border" >
+        <br>
+        <div>
+          <h2>Thông Tin Nhận Hàng</h2>
+        </div>
+        
+        <div>
+          <input class="ip2" type="text" placeholder="Nhập họ tên nhận hàng" id="hoten" name="hoten" > <br>
+        </div>
+        <div id="error_hoten" style="color:red; font-style: italic; margin-left: 15px;"></div>
+        
+        <div>
+          <input class="ip2" type="text" placeholder="Nhập số điện thoại nhận hàng" id="sdt" name="sdt" > <br>
+        </div>
+        <div id="error_sdt" style="color:red; font-style: italic; margin-left: 15px;"></div>
+
+        <div>
+          <input class="ip2" type="text" placeholder="Nhập địa chỉ nhận hàng" id="diachi" name="diachi" > <br>
+        </div>
+        <div id="error_diachi" style="color:red; font-style: italic; margin-left: 15px;"></div>
+
+        <br>
+        <div>
+          <label for="payment"><b>Phương thức thanh toán</b></label>
+          <select name="payment" id="payment">
+              <option value="shipcod" >Ship COD</option>
+              <option value="banking">Smart Banking</option>
+              <option value="momo">MoMo</option>
+              <option value="zalopay">Zalo pay</option>
+          </select>
+        </div>
+
+      </div>
+  
+      <input class="btn_form" type="reset" value="Nhập Lại" onclick="reseterror()">
+      <input class="btn_form" style="float:right;" onclick="taoDonHang()"  type="button" value="Xác Nhận Mua">  
+    
+    </form>
+  </div> 
+  <div class="form_donhang" id="form_donhang">
+    <!-- danh sách item giỏ hàng -->
+    <h1 class="tieudegiohang">Đơn Hàng Đã Đặt</h1>
+
+    <!-- tiêu để của item giỏ hàng  -->
+    <div class="item-gio-hang">
+     
+      <!-- hiện thị danh sách item giỏ hàng -->
+    </div>
+   
+  </div> 
+  
+    
+</body>
+</html>
