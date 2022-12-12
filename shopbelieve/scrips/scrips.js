@@ -1347,11 +1347,11 @@ function show_giohang() {
     hienThiDanhSachItemGioHang();
   }
   else
-    thongbao_loi();
+    alert("Đăng nhập để mở");
 }
 function onClickDuaVaoGioHang(product_id) {
   if (JSON.parse(localStorage.getItem("login_status")) == true) {
-    thongbao_ok();
+    alert("Thêm vào giỏ hàng thành công");
     const products = JSON.parse(localStorage.getItem("product"));
     const product = products.find(
       (product) => product.product_id === `'${product_id}'`
@@ -1375,26 +1375,10 @@ function onClickDuaVaoGioHang(product_id) {
 
     luuDanhSachItemGioHangVaoLocalStorage(danhSachItemGioHang);
   } else {
-    thongbao_loi();
+    alert("Đăng nhập để thêm");
   }
 }
 
-function thongbao_ok() {
-  var x = document.getElementById("thongbao");
-  document.getElementById("thongbao").style.display = "block";
-  var a = innertitle();
-  a = `
-  <div class="thongbao" id="thongbao" onclick="exit_tb()">      <video src="image/check/themok.mp4" autoplay muted >    </div>`;
-  return (x.innerHTML = a);
-}
-function thongbao_loi() {
-  var x = document.getElementById("thongbao");
-  document.getElementById("thongbao").style.display = "block";
-  var a = innertitle();
-  a = `
-  <div class="thongbao" id="thongbao" onclick="exit_tb()">      <video src="image/check/themloi.mp4" autoplay muted >    </div>`;
-  return (x.innerHTML = a);
-}
 function exit_tb() {
   document.getElementById("thongbao").style.display = "none";
 }
