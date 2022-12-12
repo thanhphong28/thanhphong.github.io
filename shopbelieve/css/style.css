@@ -1539,13 +1539,6 @@ opacity: 0.7;
   #div_trangthai select {
     font-size: small;
   }
-  .thongbao video {
-    border-radius: 20px;
-    width: 15%;
-    position: fixed;
-    top: 25%;
-    left: 40%;
-  }
 }
 
 /*----Tablet---(740px <= width < 1024px)----*/
@@ -1684,10 +1677,4 @@ opacity: 0.7;
     margin-right: 25px;
   }
 }
-.thongbao video {
-  border-radius: 20px;
-  width: 15%;
-  position: fixed;
-  top: 25%;
-  left: 40%;
-}
+
